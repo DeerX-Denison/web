@@ -8,9 +8,7 @@ import Hero from '../components/Hero';
 const Home: NextPage = () => {
 	return (
 		<div className="bg-gray">
-			<header>
-				<Header />
-			</header>
+			<header>{/* <Header /> */}</header>
 			<main>
 				<Hero />
 			</main>
