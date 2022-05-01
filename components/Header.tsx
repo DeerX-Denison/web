@@ -1,98 +1,14 @@
 import React, { FC } from 'react';
 import { Fragment } from 'react';
-import { Popover, Transition } from '@headlessui/react';
-import {
-	BookmarkAltIcon,
-	CalendarIcon,
-	ChartBarIcon,
-	CursorClickIcon,
-	MenuIcon,
-	PhoneIcon,
-	PlayIcon,
-	RefreshIcon,
-	ShieldCheckIcon,
-	SupportIcon,
-	ViewGridIcon,
-	XIcon,
-} from '@heroicons/react/outline';
-import { ChevronDownIcon } from '@heroicons/react/solid';
+import { Disclosure, Menu, Transition } from '@headlessui/react';
+import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
 import Image from 'next/image';
 import Link from 'next/link';
-const solutions = [
-	{
-		name: 'Analytics',
-		description:
-			'Get a better understanding of where your traffic is coming from.',
-		href: '#',
-		icon: ChartBarIcon,
-	},
-	{
-		name: 'Engagement',
-		description: 'Speak directly to your customers in a more meaningful way.',
-		href: '#',
-		icon: CursorClickIcon,
-	},
-	{
-		name: 'Security',
-		description: "Your customers' data will be safe and secure.",
-		href: '#',
-		icon: ShieldCheckIcon,
-	},
-	{
-		name: 'Integrations',
-		description: "Connect with third-party tools that you're already using.",
-		href: '#',
-		icon: ViewGridIcon,
-	},
-	{
-		name: 'Automations',
-		description:
-			'Build strategic funnels that will drive your customers to convert',
-		href: '#',
-		icon: RefreshIcon,
-	},
-];
-const callsToAction = [
-	{ name: 'Watch Demo', href: '#', icon: PlayIcon },
-	{ name: 'Contact Sales', href: '#', icon: PhoneIcon },
-];
-const resources = [
-	{
-		name: 'Help Center',
-		description:
-			'Get all of your questions answered in our forums or contact support.',
-		href: '#',
-		icon: SupportIcon,
-	},
-	{
-		name: 'Guides',
-		description:
-			'Learn how to maximize our platform to get the most out of it.',
-		href: '#',
-		icon: BookmarkAltIcon,
-	},
-	{
-		name: 'Events',
-		description:
-			'See what meet-ups and other events we might be planning near you.',
-		href: '#',
-		icon: CalendarIcon,
-	},
-	{
-		name: 'Security',
-		description: 'Understand how we take your privacy seriously.',
-		href: '#',
-		icon: ShieldCheckIcon,
-	},
-];
-const recentPosts = [
-	{ id: 1, name: 'Boost your conversion rate', href: '#' },
-	{
-		id: 2,
-		name: 'How to use search engine optimization to drive traffic to your site',
-		href: '#',
-	},
-	{ id: 3, name: 'Improve your customer experience', href: '#' },
+
+const navigation = [
+	{ name: 'Home', href: '#', current: false },
+	{ name: 'Contacts', href: '#', current: false },
+	{ name: 'Change Log', href: '#', current: true },
 ];
 
 function classNames(...classes: string[]) {
@@ -100,6 +16,157 @@ function classNames(...classes: string[]) {
 }
 
 const Header: FC = () => {
-	return <></>;
+	return (
+		<Disclosure as="nav" className="bg-gray-800">
+			{({ open }) => (
+				<>
+					<div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+						<div className="relative flex items-center justify-between h-16">
+							<div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+								{/* Mobile menu button*/}
+								<Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-denison-red hover:text-pink hover:bg-pink">
+									<span className="sr-only">Open main menu</span>
+									{open ? (
+										<XIcon className="block h-6 w-6" aria-hidden="true" />
+									) : (
+										<MenuIcon className="block h-6 w-6" aria-hidden="true" />
+									)}
+								</Disclosure.Button>
+							</div>
+							<div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+								<div className="flex-shrink-0 flex items-center">
+									<Image
+										height={48}
+										width={48}
+										className="block lg:hidden h-8 w-auto"
+										src="/logo.svg"
+										alt="Deer X Application Logo"
+									/>
+								</div>
+								<div className="hidden sm:block sm:ml-6">
+									<div className="flex space-x-4 px-3">
+										{navigation.map((item) => (
+											<Link
+												key={item.name}
+												href={item.href}
+												aria-current={item.current ? 'page' : undefined}
+												passHref
+											>
+												<div
+													className={classNames(
+														item.current
+															? 'bg-pink text-denison-red'
+															: 'text-light-pink hover:bg-gray-700 hover:text-gray',
+														'px-3 py-2 rounded-md text-sm font-medium'
+													)}
+												>
+													{item.name}
+												</div>
+											</Link>
+										))}
+									</div>
+								</div>
+							</div>
+							<div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+								<button
+									type="button"
+									className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+								>
+									<span className="sr-only">View notifications</span>
+									<BellIcon className="h-6 w-6" aria-hidden="true" />
+								</button>
+
+								{/* Profile dropdown */}
+								<Menu as="div" className="ml-3 relative">
+									<div>
+										<Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+											<span className="sr-only">Open user menu</span>
+											<img
+												className="h-8 w-8 rounded-full"
+												src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+												alt=""
+											/>
+										</Menu.Button>
+									</div>
+									<Transition
+										as={Fragment}
+										enter="transition ease-out duration-100"
+										enterFrom="transform opacity-0 scale-95"
+										enterTo="transform opacity-100 scale-100"
+										leave="transition ease-in duration-75"
+										leaveFrom="transform opacity-100 scale-100"
+										leaveTo="transform opacity-0 scale-95"
+									>
+										<Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+											<Menu.Item>
+												{({ active }) => (
+													<a
+														href="#"
+														className={classNames(
+															active ? 'bg-gray-100' : '',
+															'block px-4 py-2 text-sm text-gray-700'
+														)}
+													>
+														Your Profile
+													</a>
+												)}
+											</Menu.Item>
+											<Menu.Item>
+												{({ active }) => (
+													<a
+														href="#"
+														className={classNames(
+															active ? 'bg-gray-100' : '',
+															'block px-4 py-2 text-sm text-gray-700'
+														)}
+													>
+														Settings
+													</a>
+												)}
+											</Menu.Item>
+											<Menu.Item>
+												{({ active }) => (
+													<a
+														href="#"
+														className={classNames(
+															active ? 'bg-gray-100' : '',
+															'block px-4 py-2 text-sm text-gray-700'
+														)}
+													>
+														Sign out
+													</a>
+												)}
+											</Menu.Item>
+										</Menu.Items>
+									</Transition>
+								</Menu>
+							</div>
+						</div>
+					</div>
+
+					<Disclosure.Panel className="sm:hidden">
+						<div className="px-2 pt-2 pb-3 space-y-1">
+							{navigation.map((item) => (
+								<Disclosure.Button
+									key={item.name}
+									as="a"
+									href={item.href}
+									className={classNames(
+										item.current
+											? 'bg-gray-900 text-white'
+											: 'text-gray-300 hover:bg-gray-700 hover:text-white',
+										'block px-3 py-2 rounded-md text-base font-medium'
+									)}
+									aria-current={item.current ? 'page' : undefined}
+								>
+									{item.name}
+								</Disclosure.Button>
+							))}
+						</div>
+					</Disclosure.Panel>
+				</>
+			)}
+		</Disclosure>
+	);
 };
 export default Header;
