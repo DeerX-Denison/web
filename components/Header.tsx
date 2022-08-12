@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const NAVIGATION = [
 	{ name: 'Home', href: '#', current: false },
-	{ name: 'About Us', href: '#', current: false },
+	{ name: 'About Us', href: './about-us', current: false },
 	{ name: 'Contacts', href: '#', current: false },
 	// { name: 'Change Log', href: '#', current: true },
 	{name: 'Feature', href: '#', current: false},
@@ -21,7 +21,7 @@ function classNames(...classes: string[]) {
 
 const Header: FC = () => {
 	return (
-		<Disclosure as="nav" className="fixed w-full top-0 z-10 shadow bg-light-pink">
+		<Disclosure as="nav" className="fixed w-full top-0 z-10 shadow bg-gray">
 			{({ open }) => (
 				<>
 					<div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -61,11 +61,13 @@ const Header: FC = () => {
 														// item.current
 														// 	? 'bg-pink text-denison-red'
 														// 	: 'text-light-pink hover:bg-gray-700 hover:text-gray',
-														'text-denison-red px-3 py-3 rounded-md text-base font-medium cursor-pointer hover:bg-pink'
+														'text-denison-red px-3 py-3 rounded-md text-base font-medium cursor-pointer group'
 													)}
 												>
 													{item.name}
+													<div className="bg-pink w-0 duration-150 ease-in group-hover:w-full" style={{height: "3px"}}></div>
 												</div>
+												
 											</Link>
 										))}
 									</div>

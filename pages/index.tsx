@@ -12,7 +12,7 @@ const Home: NextPage = () => {
 			<header><Header /></header>
 			<main>
 				<Hero />
-				<div className='mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24 flex justify-between'>
+				<div className='mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24 grid md:grid-cols-2 sm:grid-cols-1'>
 					<div>									
 						<Image
 						height={180}
@@ -25,8 +25,9 @@ const Home: NextPage = () => {
 					<div className='flex flex-col items-start'>
 						<div className='text-5xl text-denison-red font-bold mb-4'>Who are we?</div>
 						<div className='mb-4 font-medium'>We are a dedicated, creative, and talented team at Denison University.</div>
-						<div className='mb-7 font-medium'>DeerX is an E-commerce app helping Denison students sell their dorm goods, books, personal items, and more. DeerX app is
-							now avaible on AppStore and later on Google Play, and on our official website.
+						<div className='mb-7 font-medium'>DeerX is an E-commerce marketplace app helping Denison students sell and buy 
+						dorm goods, books, personal items, and more. DeerX app is now avaible on AppStore, later on Google Play and 
+						our official website.
 						</div>
 					</div>
 				</div>
