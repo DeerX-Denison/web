@@ -23,7 +23,7 @@ const Home: NextPage = () => {
 						/>
 					</div>
 					<div className='flex flex-col items-start'>
-						<div className='text-5xl text-denison-red font-bold mb-4'>Who are we?</div>
+						<div className='text-5xl text-denison-red font-bold mb-4'>DeerX who?</div>
 						<div className='mb-4 font-medium'>We are a dedicated, creative, and talented team at Denison University.</div>
 						<div className='mb-7 font-medium'>DeerX is an E-commerce marketplace app helping Denison students sell and buy 
 						dorm goods, books, personal items, and more. DeerX app is now avaible on AppStore, later on Google Play and 
