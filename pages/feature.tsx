@@ -9,15 +9,14 @@ import DeviceLockIcon from '../components/icon/DeviceLockIcon';
 import DeviceChartIcon from '../components/icon/DeviceChartIcon';
 import DeviceUserIcon from '../components/icon/DeviceUserIcon';
 import Header from '../components/Header';
-
+import FeatureContent from '../components/FeatureContent';
+import listing from '../public/image/listing.png';
+import chat from '../public/image/chat.png';
+import createItem from '../public/image/create-item.png';
+import likedItem from '../public/image/liked-item.png';
+import menu from '../public/image/menu.png';
 
 const features = [
-  // {
-  //   name: '',
-  //   description:
-  //     'Whether it’s $1 or $1,000,000, we can put your money to work for you.',
-  //   icon: DeviceArrowIcon,
-  // },
   {
     name: 'List of products',
     description:
@@ -42,16 +41,32 @@ const features = [
       'Cutting-edge security technology that even the NSA doesn’t know about keeps you hidden.',
     icon: DeviceUserIcon,
   },
-  // {
-  //   name: 'Portfolio tracking',
-  //   description:
-  //     'Watch your investments grow exponentially, leaving other investors in the dust.',
-  //   icon: DeviceChartIcon,
-  // },
+];
+
+const stacks = [
+  {
+    position: 1,
+    image: listing,
+  },
+  {
+    position: 2,
+    image: chat,
+  },
+  {
+    position: 3,
+    image: createItem,
+  },
+  {
+    position: 4,
+    image: likedItem,
+  },
+  {
+    position: 5,
+    image: menu,
+  },
 ]
 
 const Feature:NextPage = () => {
-
   return (
     <>
     <header><Header/></header>
@@ -87,6 +102,13 @@ const Feature:NextPage = () => {
             </li>
           ))}
         </ul>
+        <div> 
+          {stacks.map((stack)=>{
+            return (
+              <FeatureContent key={stack.position} position={stack.position} image={stack.image}/>
+            )
+          })}
+        </div>
       </div>
     </section>
     </>

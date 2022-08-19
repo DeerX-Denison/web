@@ -65,7 +65,7 @@ const Header: FC = () => {
 													)}
 												>
 													{item.name}
-													<div className="bg-pink w-0 duration-150 ease-in group-hover:w-full" style={{height: "3px"}}></div>
+													<div className="bg-pink w-0 duration-150 ease-in group-hover:w-full" style={{height: "2px", borderRadius: "18%"}}></div>
 												</div>
 												
 											</Link>
