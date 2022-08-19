@@ -9,6 +9,7 @@ import DeviceLockIcon from '../components/icon/DeviceLockIcon';
 import DeviceChartIcon from '../components/icon/DeviceChartIcon';
 import DeviceUserIcon from '../components/icon/DeviceUserIcon';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import FeatureContent from '../components/FeatureContent';
 import listing from '../public/image/listing.png';
 import chat from '../public/image/chat.png';
@@ -111,6 +112,7 @@ const Feature:NextPage = () => {
         </div>
       </div>
     </section>
+    <Footer/>
     </>
   )
 }
