@@ -5,8 +5,13 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
 import Image from 'next/image';
 import Link from 'next/link';
 
+interface HeaderProps {
+	onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+}
+
+
 const NAVIGATION = [
-	{ name: 'Home', href: '/', current: false },
+	{ name: 'Home', href: '/', current: true },
 	{ name: 'About Us', href: './about-us', current: false },
 	{ name: 'Contacts', href: '#', current: false },
 	// { name: 'Change Log', href: '#', current: true },
@@ -19,7 +24,13 @@ function classNames(...classes: string[]) {
 	return classes.filter(Boolean).join(' ');
 }
 
-const Header: FC = () => {
+function handleCurrentPage (page: string){
+	NAVIGATION.map((tab)=>{
+		tab.name === page ? tab.current = true : tab.current = false;
+	})
+}
+
+const Header: FC<HeaderProps> = () => {
 	return (
 		<Disclosure as="nav" className="fixed w-full top-0 z-10 shadow bg-gray">
 			{({ open }) => (
@@ -58,14 +69,14 @@ const Header: FC = () => {
 											>
 												<div
 													className={classNames(
-														// item.current
-														// 	? 'bg-pink text-denison-red'
-														// 	: 'text-light-pink hover:bg-gray-700 hover:text-gray',
-														'text-denison-red px-3 py-3 rounded-md text-base font-medium cursor-pointer group'
+														item.current
+															? 'text-denison-red px-1 pt-3 rounded-md text-base font-medium cursor-pointer underline underline-offset-8 decoration-2 decoration-pink'
+															: 'text-denison-red px-1 py-3 mb-3 rounded-md text-base font-medium cursor-pointer group'
 													)}
+													onClick={()=>{handleCurrentPage(item.name)}}
 												>
 													{item.name}
-													<div className="bg-pink w-0 duration-150 ease-in group-hover:w-full" style={{height: "2px", borderRadius: "18%"}}></div>
+													<div className="bg-pink w-0 duration-150 ease-in group-hover:w-full" style={{marginTop: "2px", height: "2px", borderRadius: "18%"}}></div>
 												</div>
 												
 											</Link>
