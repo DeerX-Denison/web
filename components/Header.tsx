@@ -6,17 +6,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 interface HeaderProps {
-	onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+	// onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 
 const NAVIGATION = [
 	{ name: 'Home', href: '/', current: true },
-	{ name: 'About Us', href: './about-us', current: false },
+	{ name: 'About Us', href: '/about-us', current: false },
 	{ name: 'Contacts', href: '#', current: false },
 	// { name: 'Change Log', href: '#', current: true },
 	{name: 'Feature', href: '/feature', current: false},
-	{name: 'Q&A', href: '#', current: false},
+	{name: 'Q&A', href: '/qa', current: false},
 	
 ];
 
