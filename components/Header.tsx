@@ -6,15 +6,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 interface HeaderProps {
-	// onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
-}
 
+}
 
 const NAVIGATION = [
 	{ name: 'Home', href: '/', current: true },
 	{ name: 'About Us', href: '/about-us', current: false },
 	{ name: 'Contacts', href: '#', current: false },
-	// { name: 'Change Log', href: '#', current: true },
 	{name: 'Feature', href: '/feature', current: false},
 	{name: 'Q&A', href: '/qa', current: false},
 	
@@ -49,15 +47,6 @@ const Header: FC<HeaderProps> = () => {
 								</Disclosure.Button>
 							</div>
 							<div className="flex-1 flex items-center justify-end sm:items-stretch">
-								{/* <div className="flex-shrink-0 flex items-center">
-									<Image
-										height={48}
-										width={48}
-										className="block lg:hidden h-8 w-auto"
-										src="/logo.svg"
-										alt="Deer X Application Logo"
-									/>
-								</div> */}
 								<div className="hidden sm:block sm:ml-6">
 									<div className="flex space-x-4 px-3">
 										{NAVIGATION.map((item) => (
