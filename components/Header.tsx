@@ -59,8 +59,8 @@ const Header: FC<HeaderProps> = () => {
 												<div
 													className={classNames(
 														item.current
-															? 'text-denison-red px-1 pt-3 rounded-md text-base font-medium cursor-pointer underline underline-offset-8 decoration-2 decoration-pink'
-															: 'text-denison-red px-1 py-3 mb-3 rounded-md text-base font-medium cursor-pointer group'
+															? 'text-denison-red px-1 py-4 rounded-md text-base font-medium cursor-pointer underline underline-offset-8 decoration-2 decoration-pink'
+															: 'text-denison-red px-1 py-4 rounded-md text-base font-medium cursor-pointer group'
 													)}
 													onClick={()=>{handleCurrentPage(item.name)}}
 												>
