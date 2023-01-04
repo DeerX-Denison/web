@@ -5,7 +5,7 @@ import ArrowUpIcon from '../components/icon/ArrowUpIcon';
 interface Props{
     content:{
         id: number,
-        question: string,
+        question: string,   
         answer: string,
     }
 }

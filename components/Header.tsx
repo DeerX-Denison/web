@@ -11,11 +11,10 @@ interface HeaderProps {
 
 const NAVIGATION = [
 	{ name: 'Home', href: '/', current: true },
+	{ name: 'Product', href: '/feature', current: false},
 	{ name: 'About Us', href: '/about-us', current: false },
 	{ name: 'Contacts', href: '#', current: false },
-	{name: 'Feature', href: '/feature', current: false},
-	{name: 'Q&A', href: '/qa', current: false},
-	
+	{ name: 'Q&A', href: '/qa', current: false},
 ];
 
 function classNames(...classes: string[]) {
