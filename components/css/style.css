@@ -1,0 +1,8 @@
+.feature-img {
+    box-sizing: content-box;
+}
+
+.feature-img > div{
+    min-height: 75% !important;
+    min-width: 60% !important;
+}

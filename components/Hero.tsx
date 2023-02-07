@@ -3,7 +3,7 @@ import { ChevronRightIcon, StarIcon } from '@heroicons/react/solid';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faApple } from '@fortawesome/free-brands-svg-icons';
-import Link from 'next/link';
+import Link from 'next/link'; 
 
 const Hero: FC = () => {
 	return (

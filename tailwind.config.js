@@ -12,9 +12,9 @@ module.exports = {
 		colors: {
 			'denison-red': '#C7202F',
 			'dark-red': '#C8102E',
-			pink: '#F18D9E',
+			'pink': '#F18D9E',
 			'light-pink': '#EBD0C9',
-			gray: '#F5F5F9',
+			'gray': '#F5F5F9',
 		},
 	},
 	plugins: [],

@@ -5,19 +5,31 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const navigation = [
-	{ name: 'Home', href: '#', current: false },
+interface HeaderProps {
+
+}
+
+const NAVIGATION = [
+	{ name: 'Home', href: '/', current: true },
+	{ name: 'Product', href: '/feature', current: false},
+	{ name: 'About Us', href: '/about-us', current: false },
 	{ name: 'Contacts', href: '#', current: false },
-	{ name: 'Change Log', href: '#', current: true },
+	{ name: 'Q&A', href: '/qa', current: false},
 ];
 
 function classNames(...classes: string[]) {
 	return classes.filter(Boolean).join(' ');
 }
 
-const Header: FC = () => {
+function handleCurrentPage (page: string){
+	NAVIGATION.map((tab)=>{
+		tab.name === page ? tab.current = true : tab.current = false;
+	})
+}
+
+const Header: FC<HeaderProps> = () => {
 	return (
-		<Disclosure as="nav" className="bg-gray-800">
+		<Disclosure as="nav" className="fixed w-full top-0 z-10 shadow bg-gray">
 			{({ open }) => (
 				<>
 					<div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -33,19 +45,10 @@ const Header: FC = () => {
 									)}
 								</Disclosure.Button>
 							</div>
-							<div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-								<div className="flex-shrink-0 flex items-center">
-									<Image
-										height={48}
-										width={48}
-										className="block lg:hidden h-8 w-auto"
-										src="/logo.svg"
-										alt="Deer X Application Logo"
-									/>
-								</div>
+							<div className="flex-1 flex items-center justify-end sm:items-stretch">
 								<div className="hidden sm:block sm:ml-6">
 									<div className="flex space-x-4 px-3">
-										{navigation.map((item) => (
+										{NAVIGATION.map((item) => (
 											<Link
 												key={item.name}
 												href={item.href}
@@ -55,13 +58,15 @@ const Header: FC = () => {
 												<div
 													className={classNames(
 														item.current
-															? 'bg-pink text-denison-red'
-															: 'text-light-pink hover:bg-gray-700 hover:text-gray',
-														'px-3 py-2 rounded-md text-sm font-medium'
+															? 'text-denison-red px-1 py-4 rounded-md text-base font-medium cursor-pointer underline underline-offset-8 decoration-2 decoration-pink'
+															: 'text-denison-red px-1 py-4 rounded-md text-base font-medium cursor-pointer group'
 													)}
+													onClick={()=>{handleCurrentPage(item.name)}}
 												>
 													{item.name}
+													<div className="bg-pink w-0 duration-150 ease-in group-hover:w-full" style={{marginTop: "2px", height: "2px", borderRadius: "18%"}}></div>
 												</div>
+												
 											</Link>
 										))}
 									</div>
@@ -97,7 +102,7 @@ const Header: FC = () => {
 										leaveFrom="transform opacity-100 scale-100"
 										leaveTo="transform opacity-0 scale-95"
 									>
-										<Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+										<Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-gray ring-1 ring-black ring-opacity-5 focus:outline-none">
 											<Menu.Item>
 												{({ active }) => (
 													<a
@@ -146,7 +151,7 @@ const Header: FC = () => {
 
 					<Disclosure.Panel className="sm:hidden">
 						<div className="px-2 pt-2 pb-3 space-y-1">
-							{navigation.map((item) => (
+							{NAVIGATION.map((item) => (
 								<Disclosure.Button
 									key={item.name}
 									as="a"
