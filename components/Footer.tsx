@@ -41,9 +41,13 @@ const navigation = {
 	],
 };
 
-const Footer: FC = () => {
+interface FooterProp{
+	underline: boolean;
+  }
+
+const Footer: FC<FooterProp> = (props) => {
 	return (
-		<div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8 border-t-2 border-pink">
+		<div className={`max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8 ${props.underline?"border-pink border-t-2":""}`}>
 			<nav
 				className="-mx-5 -my-2 flex flex-wrap justify-center"
 				aria-label="Footer"
@@ -57,7 +61,7 @@ const Footer: FC = () => {
 					</div>
 				))}
 			</nav>
-			<div className="mt-8 flex justify-center ">
+			<div className="mt-8 flex justify-center">
 				{navigation.social.map((item) => (
 					<>
 						<span className="sr-only">{item.name}</span>

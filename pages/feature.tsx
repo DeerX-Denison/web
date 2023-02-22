@@ -112,7 +112,7 @@ const Feature:NextPage = () => {
         </div>
       </div>
     </section>
-    <Footer/>
+    <Footer underline={true}/>
     </>
   )
 }

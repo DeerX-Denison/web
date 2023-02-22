@@ -16,6 +16,9 @@ module.exports = {
 			'light-pink': '#EBD0C9',
 			'gray': '#F5F5F9',
 		},
+		backgroundImage:{
+			'about-us': "url('../img/about-us-bg.png')",
+		}
 	},
 	plugins: [],
 };

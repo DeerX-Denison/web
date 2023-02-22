@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 import React from 'react';
 import Footer from '../components/Footer';
 import Image from 'next/image';
-
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 
@@ -33,7 +32,7 @@ const Home: NextPage = () => {
 				</div>
 			</main>
 			<footer>
-				<Footer />
+				<Footer underline={true}/>
 			</footer>
 		</div>
 	);

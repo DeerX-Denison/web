@@ -119,7 +119,7 @@ const Qa:NextPage = () => {
         </div>
         </div>
     </section>
-    <Footer/>
+    <Footer underline={true}/>
     </>
   )
 }
