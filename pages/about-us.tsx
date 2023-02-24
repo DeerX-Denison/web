@@ -42,7 +42,7 @@ const About:NextPage = () => {
         <div className="max-w-md mx-auto py-20 px-4 sm:py-32 sm:max-w-3xl lg:max-w-7xl lg:px-8">
           <h1 className="text-4xl font-extrabold tracking-wide md:text-5xl lg:text-6xl text-center">Meet our team</h1>
           <section style={{padding: "0 20%"}}>
-            <div className='text-pink p-5 text-xl text-blue-gray-300'>
+            <div className='border-denison-red border-4 p-5 text-xl text-blue-gray-300 bg-white'>
               Welcome to DeerX, the official marketplace app for Denison University! We are excited to introduce 
               this new platform to the Denison community as a way to connect students and make it easier to buy 
               and sell goods and services on campus. Whether you are looking to sell your old textbooks, dorm utilities, 

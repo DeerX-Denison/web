@@ -15,10 +15,12 @@ module.exports = {
 			'pink': '#F18D9E',
 			'light-pink': '#EBD0C9',
 			'gray': '#F5F5F9',
+			'black': '#121111',
+			'white': '#FCFDFF',
 		},
 		backgroundImage:{
 			'about-us': "url('../img/about-us-bg.png')",
-		}
+		},
 	},
 	plugins: [],
 };
