@@ -1,12 +1,8 @@
 import React from 'react'
 import type { NextPage } from 'next'
-import Container from '../components/Container';
-import DeviceArrowIcon from '../components/icon/DeviceArrowIcon';
 import DeviceCardsIcon from '../components/icon/DeviceCardsIcon';
 import DeviceClockIcon from '../components/icon/DeviceClockIcon';
 import DeviceListIcon from '../components/icon/DeviceListIcon';
-import DeviceLockIcon from '../components/icon/DeviceLockIcon';
-import DeviceChartIcon from '../components/icon/DeviceChartIcon';
 import DeviceUserIcon from '../components/icon/DeviceUserIcon';
 import Header from '../components/Header';
 import Footer from '../components/Footer';

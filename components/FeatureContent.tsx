@@ -12,7 +12,7 @@ const FeatureContent:FC<Props> = (props) =>{
   return (
     <div className='grid md:grid-cols-2'>
         {props.position % 2 != 0 ? <div className="feature-img">
-          <Image src={props.image} alt="Listing Feature" />
+          <Image src={props.image} alt="Listing Feature"/>
         </div>:null}
         <div className="flex flex-col justify-center">
           <div className="text-denison-red mb-5">Lorem ipsum dolor sit amet.</div>
