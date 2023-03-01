@@ -32,7 +32,7 @@ transition: transform .2s ease, opacity .2s ease;
 .card-social {
 transform: translateY(200%);
 display: flex;
-justify-content: space-around;
+justify-content: center;
 width: 100%;
 opacity: 0;
 transition: transform .2s ease, opacity .2s ease;
@@ -40,6 +40,7 @@ transition: transform .2s ease, opacity .2s ease;
 
 .card-social__item {
 list-style: none;
+margin: 0 5px;
 }
 
 .card-social__item svg {
