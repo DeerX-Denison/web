@@ -49,16 +49,13 @@ const About:NextPage = () => {
         <Header/>
       </header>
       <div className='bg-about-us bg-cover'>
-        <div className="max-w-md mx-auto py-20 px-4 sm:py-32 sm:max-w-3xl lg:max-w-7xl lg:px-8">
-          <h1 className="text-4xl font-extrabold tracking-wide md:text-5xl lg:text-6xl text-center mb-5">Meet our team</h1>
+        <div className="max-w-md mx-auto py-28 px-4 sm:max-w-3xl lg:max-w-7xl lg:px-8">
+          <h1 className="text-4xl font-extrabold tracking-wide md:text-5xl lg:text-6xl text-center mb-10">Meet our team</h1>
           <section style={{padding: "0 20%"}}>
             <div className='border-denison-red border-4 p-5 text-xl text-blue-gray-300 bg-white bg-opacity-90 font-sans'>
-              Welcome to DeerX, the official marketplace app for Denison University! We are excited to introduce 
-              this new platform to the Denison community as a way to connect students and make it easier to buy 
-              and sell goods and services on campus. Whether you are looking to sell your old textbooks, dorm utilities, 
-              or unused clothing DeerX has you covered. We hope this app will help foster a sense of community and make 
-              it easier for everyone to find what they need. Download DeerX today and start exploring all the great things 
-              our campus has to offer!
+              Welcome to DeerX, the official marketplace app for Denison University! We are a team of students committing 
+              to use technologies to solve this pressing problem, and we are excited to introduce this new platform to the 
+              Denison community as a way to connect students and make it easier to buy and sell goods and services on campus.
             </div>
           </section>
           <section className='grid md:grid-cols-2 sm:grid-cols-1 2xl:grid-cols-3 p-10 gap-y-3'>

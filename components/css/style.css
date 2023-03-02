@@ -5,6 +5,7 @@
 }
 /* Member animation */
 .card {
+    border-radius: 5%;
     width: 50%;
     height: 100%;
     padding: 2rem 1.5rem;
@@ -60,11 +61,21 @@ line-height: 2rem;
 text-align: center;
 color: rgb(96, 96, 96);
 font-size: 0.8em;
+opacity: 0;
 }
 
 /*Hover*/
+.card:hover {
+    box-shadow: 0 8px 50px #0d0c0c33;
+    background-color: #f5f2ef;
+}
 .card:hover .card-info {
 transform: translateY(-5%);
+}
+
+.card:hover .card-subtitle {
+    /* transform: translateY(100%); */
+    opacity: 1;
 }
 
 .card:hover .card-social {
