@@ -51,9 +51,10 @@ transition: fill 0.2s ease ,transform 0.2s ease;
 /*Text*/
 .card-title {
 text-align: center;
-color: #333;
+color: #232323;
+opacity: 0.9;
 font-size: 1.5em;
-font-weight: 600;
+font-weight: 700;
 line-height: 2rem;
 }
 

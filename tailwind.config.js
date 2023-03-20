@@ -19,7 +19,7 @@ module.exports = {
 			'white': '#FCFDFF',
 		},
 		backgroundImage:{
-			'about-us': "url('../img/about-us-bg.png')",
+			'about-us': "url('../img/about-us-bg.svg')",
 		},
 	},
 	plugins: [],
