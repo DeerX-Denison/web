@@ -55,7 +55,7 @@ const Header: FC<HeaderProps> = () => {
 												aria-current={item.current ? 'page' : undefined}
 												passHref
 											>
-												<div
+												<a
 													className={classNames(
 														item.current
 															? 'text-denison-red px-1 py-4 rounded-md text-base font-medium cursor-pointer underline underline-offset-8 decoration-2 decoration-pink'
@@ -65,7 +65,7 @@ const Header: FC<HeaderProps> = () => {
 												>
 													{item.name}
 													<div className="bg-pink w-0 duration-150 ease-in group-hover:w-full" style={{marginTop: "2px", height: "2px", borderRadius: "18%"}}></div>
-												</div>
+												</a>
 												
 											</Link>
 										))}
