@@ -1,13 +1,13 @@
 import React, {FC} from 'react'
 import { Disclosure } from '@headlessui/react'
 import ArrowUpIcon from '../components/icon/ArrowUpIcon';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import Link from "next/link"; 
 
 interface Props{
     content:{
         key: number,
-        src: string,
+        src: StaticImageData,
         linkedln: string,
         name: string,
         title: string,

@@ -3,11 +3,13 @@ import type { NextPage } from 'next'
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Member from '../components/Member';
+import phineas from '../img/phineas.jpg';
+import wilson from '../img/wilson.jpg';
 
 const members = [
   {
     key: 0,
-    src: "https://media.licdn.com/dms/image/D5603AQEIhtJSlQ62og/profile-displayphoto-shrink_400_400/0/1665092210258?e=1678320000&v=beta&t=SLoVT98lhDZL9eBnGxjFszMqGSQOBcvnnALZS1ntfQk",
+    src: phineas,
     linkedln: "https://www.linkedin.com/in/phineaspham/",
     //add git link
     name: "Phineas Pham",
@@ -15,28 +17,28 @@ const members = [
   },
   {
     key: 1,
-    src: "https://media.licdn.com/dms/image/D5603AQEIhtJSlQ62og/profile-displayphoto-shrink_400_400/0/1665092210258?e=1678320000&v=beta&t=SLoVT98lhDZL9eBnGxjFszMqGSQOBcvnnALZS1ntfQk",
+    src: phineas,
     linkedln: "https://www.linkedin.com/in/phineaspham/",
     name: "Phineas Pham",
     title: "Founder"
   },
   {
     key: 2,
-    src: "https://media.licdn.com/dms/image/C4D03AQH6AYjbzO3SzA/profile-displayphoto-shrink_400_400/0/1611496098054?e=1678320000&v=beta&t=cZNpzDSF_iiBKgD5lw-kq345bJNFU4scpoJ13yu7lCA",
+    src: wilson,
     linkedln: "https://www.linkedin.com/in/wilsonle02/",
     name: "Wilson Le",
     title: "Co-founder & Lead Developer"
   },
   {
     key: 3,
-    src: "https://media.licdn.com/dms/image/C4D03AQH6AYjbzO3SzA/profile-displayphoto-shrink_400_400/0/1611496098054?e=1678320000&v=beta&t=cZNpzDSF_iiBKgD5lw-kq345bJNFU4scpoJ13yu7lCA",
+    src: wilson,
     linkedln: "https://www.linkedin.com/in/wilsonle02/",
     name: "Wilson Le",
     title: "Co-founder & Lead Developer"
   },
   {
     key: 4,
-    src: "https://media.licdn.com/dms/image/C4D03AQH6AYjbzO3SzA/profile-displayphoto-shrink_400_400/0/1611496098054?e=1678320000&v=beta&t=cZNpzDSF_iiBKgD5lw-kq345bJNFU4scpoJ13yu7lCA",
+    src: wilson,
     linkedln: "https://www.linkedin.com/in/wilsonle02/",
     name: "Wilson Le",
     title: "Co-founder & Lead Developer"
