@@ -1,5 +1,7 @@
+// Global CSS for pages style use Tailwind
 import '../styles/globals.css'
-import '../styles/style.css'
+// Local CSS for compenent style
+import '../components/css/style.css'
 import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {

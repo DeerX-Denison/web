@@ -110,7 +110,7 @@ const Qa:NextPage = () => {
             Frequently asked questions
         </h2>
         <div className="w-full px-4 pt-16">
-        <div className="mx-auto w-full max-w-md rounded-2xl bg-white p-2">
+        <div className="mx-auto w-full max-w-md rounded-2xl p-2">
             {faq.map(blog => {
                 return(
                     <><Faq content = {blog}/></>
@@ -119,7 +119,7 @@ const Qa:NextPage = () => {
         </div>
         </div>
     </section>
-    <Footer/>
+    <Footer underline={true}/>
     </>
   )
 }
