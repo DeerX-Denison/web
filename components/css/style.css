@@ -127,4 +127,5 @@ opacity: 1;
 .card-social__item svg:hover {
 fill: #232323;
 transform: scale(1.1);
+
 }
